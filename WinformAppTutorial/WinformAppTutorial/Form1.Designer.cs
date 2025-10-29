@@ -31,24 +31,24 @@ namespace WinformAppTutorial
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.formatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.wordWrapOffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.increaseFontSizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.decreseFontSizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resetFontSizeToDefaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblEnter = new System.Windows.Forms.Label();
             this.txtMessage = new System.Windows.Forms.RichTextBox();
-            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.formatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.wordWrapOffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.increaseFontSizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.resetFontSizeToDefaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.dlgOpenFile = new System.Windows.Forms.OpenFileDialog();
             this.dlgSaveFile = new System.Windows.Forms.SaveFileDialog();
-            this.decreseFontSizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCountWords = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -63,7 +63,7 @@ namespace WinformAppTutorial
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(665, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(670, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -78,6 +78,77 @@ namespace WinformAppTutorial
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 19);
             this.fileToolStripMenuItem.Text = "&File";
+            // 
+            // newToolStripMenuItem
+            // 
+            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newToolStripMenuItem.Text = "&New";
+            // 
+            // openToolStripMenuItem
+            // 
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Text = "&Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            // 
+            // saveAsToolStripMenuItem
+            // 
+            this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveAsToolStripMenuItem.Text = "&Save As";
+            this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            // 
+            // exitToolStripMenuItem1
+            // 
+            this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem1.Text = "&Exit";
+            this.exitToolStripMenuItem1.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
+            // 
+            // formatToolStripMenuItem
+            // 
+            this.formatToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.wordWrapOffToolStripMenuItem,
+            this.increaseFontSizeToolStripMenuItem,
+            this.decreseFontSizeToolStripMenuItem,
+            this.resetFontSizeToDefaultToolStripMenuItem});
+            this.formatToolStripMenuItem.Name = "formatToolStripMenuItem";
+            this.formatToolStripMenuItem.Size = new System.Drawing.Size(57, 19);
+            this.formatToolStripMenuItem.Text = "&Format";
+            // 
+            // wordWrapOffToolStripMenuItem
+            // 
+            this.wordWrapOffToolStripMenuItem.Name = "wordWrapOffToolStripMenuItem";
+            this.wordWrapOffToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.wordWrapOffToolStripMenuItem.Text = "&Word Wrap (Off)";
+            this.wordWrapOffToolStripMenuItem.Click += new System.EventHandler(this.wordWrapOffToolStripMenuItem_Click);
+            // 
+            // increaseFontSizeToolStripMenuItem
+            // 
+            this.increaseFontSizeToolStripMenuItem.Name = "increaseFontSizeToolStripMenuItem";
+            this.increaseFontSizeToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.increaseFontSizeToolStripMenuItem.Text = "&Increase Font Size";
+            this.increaseFontSizeToolStripMenuItem.Click += new System.EventHandler(this.increaseFontSizeToolStripMenuItem_Click);
+            // 
+            // decreseFontSizeToolStripMenuItem
+            // 
+            this.decreseFontSizeToolStripMenuItem.Name = "decreseFontSizeToolStripMenuItem";
+            this.decreseFontSizeToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.decreseFontSizeToolStripMenuItem.Text = "Decrese Font Size";
+            this.decreseFontSizeToolStripMenuItem.Click += new System.EventHandler(this.decreseFontSizeToolStripMenuItem_Click);
+            // 
+            // resetFontSizeToDefaultToolStripMenuItem
+            // 
+            this.resetFontSizeToDefaultToolStripMenuItem.Name = "resetFontSizeToDefaultToolStripMenuItem";
+            this.resetFontSizeToDefaultToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.resetFontSizeToDefaultToolStripMenuItem.Text = "&Reset Font Size To Default";
+            this.resetFontSizeToDefaultToolStripMenuItem.Click += new System.EventHandler(this.resetFontSizeToDefaultToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -110,69 +181,17 @@ namespace WinformAppTutorial
             this.txtMessage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtMessage.Location = new System.Drawing.Point(0, 25);
             this.txtMessage.Name = "txtMessage";
-            this.txtMessage.Size = new System.Drawing.Size(665, 400);
+            this.txtMessage.Size = new System.Drawing.Size(670, 407);
             this.txtMessage.TabIndex = 2;
             this.txtMessage.Text = "";
-            // 
-            // newToolStripMenuItem
-            // 
-            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.newToolStripMenuItem.Text = "&New";
-            // 
-            // openToolStripMenuItem
-            // 
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.openToolStripMenuItem.Text = "&Open";
-            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
-            // 
-            // saveAsToolStripMenuItem
-            // 
-            this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.saveAsToolStripMenuItem.Text = "&Save As";
-            this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
-            // 
-            // formatToolStripMenuItem
-            // 
-            this.formatToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.wordWrapOffToolStripMenuItem,
-            this.increaseFontSizeToolStripMenuItem,
-            this.decreseFontSizeToolStripMenuItem,
-            this.resetFontSizeToDefaultToolStripMenuItem});
-            this.formatToolStripMenuItem.Name = "formatToolStripMenuItem";
-            this.formatToolStripMenuItem.Size = new System.Drawing.Size(57, 19);
-            this.formatToolStripMenuItem.Text = "&Format";
-            // 
-            // wordWrapOffToolStripMenuItem
-            // 
-            this.wordWrapOffToolStripMenuItem.Name = "wordWrapOffToolStripMenuItem";
-            this.wordWrapOffToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
-            this.wordWrapOffToolStripMenuItem.Text = "&Word Wrap (Off)";
-            this.wordWrapOffToolStripMenuItem.Click += new System.EventHandler(this.wordWrapOffToolStripMenuItem_Click);
-            // 
-            // increaseFontSizeToolStripMenuItem
-            // 
-            this.increaseFontSizeToolStripMenuItem.Name = "increaseFontSizeToolStripMenuItem";
-            this.increaseFontSizeToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
-            this.increaseFontSizeToolStripMenuItem.Text = "&Increase Font Size";
-            this.increaseFontSizeToolStripMenuItem.Click += new System.EventHandler(this.increaseFontSizeToolStripMenuItem_Click);
-            // 
-            // resetFontSizeToDefaultToolStripMenuItem
-            // 
-            this.resetFontSizeToDefaultToolStripMenuItem.Name = "resetFontSizeToDefaultToolStripMenuItem";
-            this.resetFontSizeToDefaultToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
-            this.resetFontSizeToDefaultToolStripMenuItem.Text = "&Reset Font Size To Default";
-            this.resetFontSizeToDefaultToolStripMenuItem.Click += new System.EventHandler(this.resetFontSizeToDefaultToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblStatus});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 403);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 410);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(665, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(670, 22);
             this.statusStrip1.TabIndex = 6;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -181,18 +200,6 @@ namespace WinformAppTutorial
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(184, 17);
             this.lblStatus.Text = "Welcome to text editor demo app";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
-            // 
-            // exitToolStripMenuItem1
-            // 
-            this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.exitToolStripMenuItem1.Text = "&Exit";
-            this.exitToolStripMenuItem1.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
             // 
             // dlgOpenFile
             // 
@@ -204,16 +211,9 @@ namespace WinformAppTutorial
             // 
             this.dlgSaveFile.Filter = "Text Files (*.txt)|*.txt";
             // 
-            // decreseFontSizeToolStripMenuItem
-            // 
-            this.decreseFontSizeToolStripMenuItem.Name = "decreseFontSizeToolStripMenuItem";
-            this.decreseFontSizeToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
-            this.decreseFontSizeToolStripMenuItem.Text = "Decrese Font Size";
-            this.decreseFontSizeToolStripMenuItem.Click += new System.EventHandler(this.decreseFontSizeToolStripMenuItem_Click);
-            // 
             // btnCountWords
             // 
-            this.btnCountWords.Location = new System.Drawing.Point(543, 403);
+            this.btnCountWords.Location = new System.Drawing.Point(595, 410);
             this.btnCountWords.Name = "btnCountWords";
             this.btnCountWords.Size = new System.Drawing.Size(75, 23);
             this.btnCountWords.TabIndex = 7;
@@ -225,7 +225,7 @@ namespace WinformAppTutorial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(665, 425);
+            this.ClientSize = new System.Drawing.Size(670, 432);
             this.Controls.Add(this.btnCountWords);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.txtMessage);

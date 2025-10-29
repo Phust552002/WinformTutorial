@@ -8,3 +8,7 @@ C:\Users\Admin\Documents\GitHub\WinformTutorial\WinformAppTutorial\WinformAppTut
 C:\Users\Admin\Documents\GitHub\WinformTutorial\WinformAppTutorial\WinformAppTutorial\obj\Debug\WinformAppTutorial.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Documents\GitHub\WinformTutorial\WinformAppTutorial\WinformAppTutorial\obj\Debug\WinformAppTutorial.exe
 C:\Users\Admin\Documents\GitHub\WinformTutorial\WinformAppTutorial\WinformAppTutorial\obj\Debug\WinformAppTutorial.pdb
+C:\Users\Admin\Documents\GitHub\WinformTutorial\WinformAppTutorial\WinformAppTutorial\bin\Debug\WinformAppTutorial.exe.manifest
+C:\Users\Admin\Documents\GitHub\WinformTutorial\WinformAppTutorial\WinformAppTutorial\bin\Debug\WinformAppTutorial.application
+C:\Users\Admin\Documents\GitHub\WinformTutorial\WinformAppTutorial\WinformAppTutorial\obj\Debug\WinformAppTutorial.exe.manifest
+C:\Users\Admin\Documents\GitHub\WinformTutorial\WinformAppTutorial\WinformAppTutorial\obj\Debug\WinformAppTutorial.application
