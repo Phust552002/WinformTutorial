@@ -10,6 +10,9 @@ using System.Threading;
 using System.Windows.Forms;
 using System.IO;
 using System.Data.SqlClient;
+using System.Drawing.Printing;
+using System.Drawing.Drawing2D;
+
 
 namespace WinformAppTutorial
 {
@@ -19,8 +22,9 @@ namespace WinformAppTutorial
         private char[] splitCharacters = "\n ,,:;\"'?!".ToArray();
         bool isEditingInProgress = false;
         string fileToOpen;
-        string fileToSave;
-        string retrievedText = "";
+        //string fileToSave;
+        //string retrievedText = "";
+        private Image originalImage;
 
         public WinFormApp()
         {
@@ -66,6 +70,7 @@ namespace WinformAppTutorial
 
             }
             defaultFont = txtMessage.Font;
+            picBox.SizeMode = PictureBoxSizeMode.Zoom;
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -241,6 +246,89 @@ namespace WinformAppTutorial
 
         }
 
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
 
+        }
+
+
+
+        private void lnkOpen_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            dlgOpenFile.FileName = "";
+            dlgOpenFile.Filter = "Image files(*.gif; *.jpg; *.jpeg; *.bmp; *.wmf; *.png)| *.gif; *.jpg; *.jpeg; *.bmp; *.wmf; *.png"; 
+
+
+            dlgOpenFile.ShowDialog();
+
+            if (!string.IsNullOrEmpty(dlgOpenFile.FileName))
+                picBox.Image = Image.FromFile(@dlgOpenFile.FileName);
+                picBox.SizeMode = PictureBoxSizeMode.CenterImage;
+                originalImage = picBox.Image;
+        }
+
+        private void lnkAuto_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            picBox.Image = originalImage;
+            picBox.SizeMode = PictureBoxSizeMode.CenterImage;
+        }
+
+        private void lnkZoomIn_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            picBox.SizeMode = PictureBoxSizeMode.AutoSize;
+
+            Image img = picBox.Image;
+
+            Size size = new Size((int)(img.Width * 1.2), (int)(img.Height * 1.2));
+
+            Bitmap bm = new Bitmap(img, size);
+            Graphics g = Graphics.FromImage(bm);
+
+            g.InterpolationMode = InterpolationMode.HighQualityBilinear;
+
+            picBox.Image = bm;
+            picBox.SizeMode = PictureBoxSizeMode.CenterImage;
+        }
+
+        private void lnkZoomOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            picBox.SizeMode = PictureBoxSizeMode.AutoSize;
+
+            Image img = picBox.Image;
+
+            Size size = new Size((int)(img.Width * 0.8), (int)(img.Height * 0.8));
+
+            //check if new size width or height are below 40 in order not to allow further zooming out 
+            if (size.Width < 40 || size.Height < 40)
+                return;
+
+            Bitmap bm = new Bitmap(img, size);
+            Graphics g = Graphics.FromImage(bm);
+
+            g.InterpolationMode = InterpolationMode.HighQualityBilinear;
+
+            picBox.Image = bm;
+            picBox.SizeMode = PictureBoxSizeMode.CenterImage;
+        }
+
+        private void lnkPrint_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            PrintDialog dg = new PrintDialog();
+            PrintDocument doc = new PrintDocument();
+            doc.PrintPage += DocPrintPage;
+            dg.Document = doc;
+
+            if (dg.ShowDialog() == DialogResult.OK)
+                doc.Print();
+        }
+
+        private void DocPrintPage(object sender, PrintPageEventArgs e)
+        {
+            Bitmap bm = new Bitmap(picBox.Width, picBox.Height);
+            picBox.DrawToBitmap(bm, new Rectangle(0, 0, picBox.Width, picBox.Height));
+            e.Graphics.DrawImage(bm, 0, 0);
+            bm.Dispose();
+
+        }
     }
 }

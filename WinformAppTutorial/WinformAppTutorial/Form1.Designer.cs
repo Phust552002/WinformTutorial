@@ -75,6 +75,13 @@ namespace WinformAppTutorial
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelMain = new System.Windows.Forms.Panel();
+            this.picBox = new System.Windows.Forms.PictureBox();
+            this.lnkOpen = new System.Windows.Forms.LinkLabel();
+            this.lnkAuto = new System.Windows.Forms.LinkLabel();
+            this.lnkZoomIn = new System.Windows.Forms.LinkLabel();
+            this.lnkZoomOut = new System.Windows.Forms.LinkLabel();
+            this.lnkPrint = new System.Windows.Forms.LinkLabel();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.testDataSet)).BeginInit();
@@ -82,6 +89,8 @@ namespace WinformAppTutorial
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingNavigator)).BeginInit();
             this.employeeBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeeDataGridView)).BeginInit();
+            this.panelMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -93,7 +102,7 @@ namespace WinformAppTutorial
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(985, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(1425, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -206,9 +215,9 @@ namespace WinformAppTutorial
             // txtMessage
             // 
             this.txtMessage.Dock = System.Windows.Forms.DockStyle.Right;
-            this.txtMessage.Location = new System.Drawing.Point(690, 25);
+            this.txtMessage.Location = new System.Drawing.Point(1252, 25);
             this.txtMessage.Name = "txtMessage";
-            this.txtMessage.Size = new System.Drawing.Size(295, 450);
+            this.txtMessage.Size = new System.Drawing.Size(173, 517);
             this.txtMessage.TabIndex = 2;
             this.txtMessage.Text = "";
             // 
@@ -217,9 +226,9 @@ namespace WinformAppTutorial
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblStatus,
             this.lblCountWord});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 453);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 520);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(690, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1252, 22);
             this.statusStrip1.TabIndex = 6;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -292,7 +301,7 @@ namespace WinformAppTutorial
             this.employeeBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.employeeBindingNavigator.Name = "employeeBindingNavigator";
             this.employeeBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.employeeBindingNavigator.Size = new System.Drawing.Size(690, 25);
+            this.employeeBindingNavigator.Size = new System.Drawing.Size(1252, 25);
             this.employeeBindingNavigator.TabIndex = 8;
             this.employeeBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -320,6 +329,7 @@ namespace WinformAppTutorial
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -348,6 +358,7 @@ namespace WinformAppTutorial
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -401,9 +412,10 @@ namespace WinformAppTutorial
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.employeeDataGridView.DataSource = this.employeeBindingSource;
-            this.employeeDataGridView.Location = new System.Drawing.Point(23, 65);
+            this.employeeDataGridView.Dock = System.Windows.Forms.DockStyle.Left;
+            this.employeeDataGridView.Location = new System.Drawing.Point(0, 50);
             this.employeeDataGridView.Name = "employeeDataGridView";
-            this.employeeDataGridView.Size = new System.Drawing.Size(551, 385);
+            this.employeeDataGridView.Size = new System.Drawing.Size(544, 470);
             this.employeeDataGridView.TabIndex = 8;
             // 
             // dataGridViewTextBoxColumn1
@@ -437,11 +449,89 @@ namespace WinformAppTutorial
             this.dataGridViewTextBoxColumn5.HeaderText = "DateOfBirth";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
+            // panelMain
+            // 
+            this.panelMain.Controls.Add(this.picBox);
+            this.panelMain.Location = new System.Drawing.Point(563, 50);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(683, 418);
+            this.panelMain.TabIndex = 9;
+            // 
+            // picBox
+            // 
+            this.picBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picBox.Location = new System.Drawing.Point(0, 0);
+            this.picBox.Name = "picBox";
+            this.picBox.Size = new System.Drawing.Size(683, 418);
+            this.picBox.TabIndex = 0;
+            this.picBox.TabStop = false;
+            // 
+            // lnkOpen
+            // 
+            this.lnkOpen.AutoSize = true;
+            this.lnkOpen.Location = new System.Drawing.Point(559, 481);
+            this.lnkOpen.Name = "lnkOpen";
+            this.lnkOpen.Size = new System.Drawing.Size(111, 20);
+            this.lnkOpen.TabIndex = 1;
+            this.lnkOpen.TabStop = true;
+            this.lnkOpen.Text = "Open Image File";
+            this.lnkOpen.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkOpen_LinkClicked);
+            // 
+            // lnkAuto
+            // 
+            this.lnkAuto.AutoSize = true;
+            this.lnkAuto.Location = new System.Drawing.Point(676, 481);
+            this.lnkAuto.Name = "lnkAuto";
+            this.lnkAuto.Size = new System.Drawing.Size(110, 20);
+            this.lnkAuto.TabIndex = 10;
+            this.lnkAuto.TabStop = true;
+            this.lnkAuto.Text = "Auto-Size Image";
+            this.lnkAuto.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkAuto_LinkClicked);
+            // 
+            // lnkZoomIn
+            // 
+            this.lnkZoomIn.AutoSize = true;
+            this.lnkZoomIn.Location = new System.Drawing.Point(792, 481);
+            this.lnkZoomIn.Name = "lnkZoomIn";
+            this.lnkZoomIn.Size = new System.Drawing.Size(80, 20);
+            this.lnkZoomIn.TabIndex = 11;
+            this.lnkZoomIn.TabStop = true;
+            this.lnkZoomIn.Text = "Zoom-In (+)";
+            this.lnkZoomIn.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkZoomIn_LinkClicked);
+            // 
+            // lnkZoomOut
+            // 
+            this.lnkZoomOut.AutoSize = true;
+            this.lnkZoomOut.Location = new System.Drawing.Point(878, 481);
+            this.lnkZoomOut.Name = "lnkZoomOut";
+            this.lnkZoomOut.Size = new System.Drawing.Size(86, 20);
+            this.lnkZoomOut.TabIndex = 12;
+            this.lnkZoomOut.TabStop = true;
+            this.lnkZoomOut.Text = "Zoom-Out (-)";
+            this.lnkZoomOut.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkZoomOut_LinkClicked);
+            // 
+            // lnkPrint
+            // 
+            this.lnkPrint.AutoSize = true;
+            this.lnkPrint.Location = new System.Drawing.Point(1207, 481);
+            this.lnkPrint.Name = "lnkPrint";
+            this.lnkPrint.Size = new System.Drawing.Size(39, 20);
+            this.lnkPrint.TabIndex = 2;
+            this.lnkPrint.TabStop = true;
+            this.lnkPrint.Text = "Print";
+            this.lnkPrint.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkPrint_LinkClicked);
+            // 
             // WinFormApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(985, 475);
+            this.ClientSize = new System.Drawing.Size(1425, 542);
+            this.Controls.Add(this.lnkPrint);
+            this.Controls.Add(this.lnkZoomOut);
+            this.Controls.Add(this.lnkZoomIn);
+            this.Controls.Add(this.lnkAuto);
+            this.Controls.Add(this.lnkOpen);
+            this.Controls.Add(this.panelMain);
             this.Controls.Add(this.employeeDataGridView);
             this.Controls.Add(this.employeeBindingNavigator);
             this.Controls.Add(this.statusStrip1);
@@ -462,6 +552,8 @@ namespace WinformAppTutorial
             this.employeeBindingNavigator.ResumeLayout(false);
             this.employeeBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeeDataGridView)).EndInit();
+            this.panelMain.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -513,6 +605,13 @@ namespace WinformAppTutorial
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.ToolStripStatusLabel lblCountWord;
+        private System.Windows.Forms.Panel panelMain;
+        private System.Windows.Forms.PictureBox picBox;
+        private System.Windows.Forms.LinkLabel lnkOpen;
+        private System.Windows.Forms.LinkLabel lnkAuto;
+        private System.Windows.Forms.LinkLabel lnkZoomIn;
+        private System.Windows.Forms.LinkLabel lnkZoomOut;
+        private System.Windows.Forms.LinkLabel lnkPrint;
     }
 }
 
