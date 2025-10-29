@@ -298,7 +298,6 @@ namespace WinformAppTutorial
 
             Size size = new Size((int)(img.Width * 0.8), (int)(img.Height * 0.8));
 
-            //check if new size width or height are below 40 in order not to allow further zooming out 
             if (size.Width < 40 || size.Height < 40)
                 return;
 
