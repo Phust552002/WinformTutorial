@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using System.IO;
 
@@ -168,5 +169,31 @@ namespace WinformAppTutorial
         {
             txtMessage.Font = defaultFont;
         }
+
+        private async void btnCountWords_Click(object sender, EventArgs e)
+        {
+            lblStatus.Text = "Counting words...";
+            btnCountWords.Enabled = false;
+
+            string textToCount = txtMessage.Text;
+
+            int wordCount = await Task.Run(() => CountWords(textToCount));
+
+            lblStatus.Text = $"Done! Total words: {wordCount}";
+            btnCountWords.Enabled = true;
+        }
+
+        private int CountWords(string text)
+        {
+            if (string.IsNullOrWhiteSpace(text))
+                return 0;
+
+            Thread.Sleep(2000);
+
+            char[] splitChars = { ' ', '\n', '\r', '\t', ',', '.', ';', ':', '!', '?' };
+            var words = text.Split(splitChars, StringSplitOptions.RemoveEmptyEntries);
+            return words.Length;
+        }
+
     }
 }

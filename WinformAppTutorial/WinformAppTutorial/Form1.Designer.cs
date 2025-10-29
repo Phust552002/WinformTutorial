@@ -49,6 +49,7 @@ namespace WinformAppTutorial
             this.dlgOpenFile = new System.Windows.Forms.OpenFileDialog();
             this.dlgSaveFile = new System.Windows.Forms.SaveFileDialog();
             this.decreseFontSizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnCountWords = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -210,11 +211,22 @@ namespace WinformAppTutorial
             this.decreseFontSizeToolStripMenuItem.Text = "Decrese Font Size";
             this.decreseFontSizeToolStripMenuItem.Click += new System.EventHandler(this.decreseFontSizeToolStripMenuItem_Click);
             // 
+            // btnCountWords
+            // 
+            this.btnCountWords.Location = new System.Drawing.Point(543, 403);
+            this.btnCountWords.Name = "btnCountWords";
+            this.btnCountWords.Size = new System.Drawing.Size(75, 23);
+            this.btnCountWords.TabIndex = 7;
+            this.btnCountWords.Text = "Count Words";
+            this.btnCountWords.UseVisualStyleBackColor = true;
+            this.btnCountWords.Click += new System.EventHandler(this.btnCountWords_Click);
+            // 
             // WinFormApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(665, 425);
+            this.Controls.Add(this.btnCountWords);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.txtMessage);
             this.Controls.Add(this.lblEnter);
@@ -255,6 +267,7 @@ namespace WinformAppTutorial
         private System.Windows.Forms.OpenFileDialog dlgOpenFile;
         private System.Windows.Forms.SaveFileDialog dlgSaveFile;
         private System.Windows.Forms.ToolStripMenuItem decreseFontSizeToolStripMenuItem;
+        private System.Windows.Forms.Button btnCountWords;
     }
 }
 
