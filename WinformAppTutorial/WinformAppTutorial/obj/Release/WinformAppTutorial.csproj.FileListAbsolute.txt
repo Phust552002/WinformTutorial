@@ -1,0 +1,14 @@
+C:\Users\Admin\Documents\GitHub\WinformTutorial\WinformAppTutorial\WinformAppTutorial\bin\Release\WinformAppTutorial.exe.config
+C:\Users\Admin\Documents\GitHub\WinformTutorial\WinformAppTutorial\WinformAppTutorial\bin\Release\WinformAppTutorial.exe.manifest
+C:\Users\Admin\Documents\GitHub\WinformTutorial\WinformAppTutorial\WinformAppTutorial\bin\Release\WinformAppTutorial.application
+C:\Users\Admin\Documents\GitHub\WinformTutorial\WinformAppTutorial\WinformAppTutorial\bin\Release\WinformAppTutorial.exe
+C:\Users\Admin\Documents\GitHub\WinformTutorial\WinformAppTutorial\WinformAppTutorial\bin\Release\WinformAppTutorial.pdb
+C:\Users\Admin\Documents\GitHub\WinformTutorial\WinformAppTutorial\WinformAppTutorial\obj\Release\WinformAppTutorial.WinFormApp.resources
+C:\Users\Admin\Documents\GitHub\WinformTutorial\WinformAppTutorial\WinformAppTutorial\obj\Release\WinformAppTutorial.Properties.Resources.resources
+C:\Users\Admin\Documents\GitHub\WinformTutorial\WinformAppTutorial\WinformAppTutorial\obj\Release\WinformAppTutorial.csproj.GenerateResource.cache
+C:\Users\Admin\Documents\GitHub\WinformTutorial\WinformAppTutorial\WinformAppTutorial\obj\Release\WinformAppTutorial.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\WinformTutorial\WinformAppTutorial\WinformAppTutorial\obj\Release\WinformAppTutorial.exe.manifest
+C:\Users\Admin\Documents\GitHub\WinformTutorial\WinformAppTutorial\WinformAppTutorial\obj\Release\WinformAppTutorial.application
+C:\Users\Admin\Documents\GitHub\WinformTutorial\WinformAppTutorial\WinformAppTutorial\obj\Release\WinformAppTutorial.exe
+C:\Users\Admin\Documents\GitHub\WinformTutorial\WinformAppTutorial\WinformAppTutorial\obj\Release\WinformAppTutorial.pdb
+C:\Users\Admin\Documents\GitHub\WinformTutorial\WinformAppTutorial\WinformAppTutorial\obj\Release\WinformAppTutorial.csproj.AssemblyReference.cache

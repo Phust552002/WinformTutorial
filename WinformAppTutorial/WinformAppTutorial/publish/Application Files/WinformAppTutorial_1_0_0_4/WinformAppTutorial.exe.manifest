@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="WinformAppTutorial.exe" version="1.0.0.4" publicKeyToken="ba39e1838662b7cd" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="WinformAppTutorial" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="WinformAppTutorial.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WinformAppTutorial.exe" size="17880">
+      <assemblyIdentity name="WinformAppTutorial" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>0H+Sp2t8aoDUg6ccQZplCyBwl4k9vkV5XYmnf2lu+BA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="WinformAppTutorial.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=ITD-IS-PHUCHT\Admin" issuerKeyHash="f643a13f5aab07d6ae4fbcfeade3a32ebc23351e" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>2dFlagnJwsnsP65n0RgnzmPxvXsKIYuQpLZFaH0oTVs=</DigestValue></Reference></SignedInfo><SignatureValue>z3iU8I+j2ae49RyWgrSKGPvykzlLbxOVD6Ov8iHl7+80tW6JGUtIchE3kbHFKvMMeece16K7mGHPyptH2bLfjrCNq0uIhMZU55KxUuocPG6YZowLzNVcZorCAM/+hLoed3KqT2hopAp7qSSD7gk9JxeoftFwIhz0j+fz/Rx7Umk=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>7Csim/lsIIJ0mznAyZlybN8VqR9osf7d6XQ+FdgBHTxM7baoeREnrbzMBiRZxv1GgckHkeKv7on+xbVSxtaD+YvxlmbUjcCOQf4xp+7j4ebQ9AnZDAyFx4fAbq1SoaTIkfqY07WPVRQIC+NVP6k1Ae8fSIGXtVEGKeEUSLOD/pU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="5b4d287d6845b6a4908b210a7bbdf163ce2718d167ae3fecc9c2c9096a65d1d9" Description="" Url=""><as:assemblyIdentity name="WinformAppTutorial.exe" version="1.0.0.4" publicKeyToken="ba39e1838662b7cd" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=ITD-IS-PHUCHT\Admin</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>Q3AELIlFeTShmCiSJ1pTuM/yFKd7qV8I39JUOE0ctbQ=</DigestValue></Reference></SignedInfo><SignatureValue>2Bo1KooKt0EcVK6qWs1jfeLMuK98uYMbNKtcIV1U75fNClv+UNEzqWc/JaweDN39NPfVQCCzTWjXIHmk2pTRnuiJtlIz7I9I3GgV4+MRmWoOumsWmizQlciKHka6LcVBPapGCDID9njaQBZj5wrK+mLXLZ1MmkQufLyDeGlrjCU=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>7Csim/lsIIJ0mznAyZlybN8VqR9osf7d6XQ+FdgBHTxM7baoeREnrbzMBiRZxv1GgckHkeKv7on+xbVSxtaD+YvxlmbUjcCOQf4xp+7j4ebQ9AnZDAyFx4fAbq1SoaTIkfqY07WPVRQIC+NVP6k1Ae8fSIGXtVEGKeEUSLOD/pU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB5TCCAU6gAwIBAgIQJiZoPyXLcbZE1cYBYBuorDANBgkqhkiG9w0BAQsFADAxMS8wLQYDVQQDHiYASQBUAEQALQBJAFMALQBQAEgAVQBDAEgAVABcAEEAZABtAGkAbjAeFw0yNTEwMjkwMTAzNTFaFw0yNjEwMjkwNzAzNTFaMDExLzAtBgNVBAMeJgBJAFQARAAtAEkAUwAtAFAASABVAEMASABUAFwAQQBkAG0AaQBuMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDsKyKb+WwggnSbOcDJmXJs3xWpH2ix/t3pdD4V2AEdPEzttqh5ESetvMwGJFnG/UaByQeR4q/uif7FtVLG1oP5i/GWZtSNwI5B/jGn7uPh5tD0CdkMDIXHh8BurVKhpMiR+pjTtY9VFAgL41U/qTUB7x9IgZe1UQYp4RRIs4P+lQIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAFEx1S80TFQs49E4XXF+AUuNVLVwHvc/tjns2snfLtNM+zVbPv86JPDuOZx3PuA1cpPrW3pxfUg6AB+DMV4rW90emZryTTWBCC0th2yWvgUMLOrYCYB3q7Ko3sZXnU5INColu0Qa0GAP7BGheNhpDv7JEu4r/QVRIPllTCMNdXJv</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

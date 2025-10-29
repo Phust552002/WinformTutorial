@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
 using System.IO;
+using System.Data.SqlClient;
 
 namespace WinformAppTutorial
 {
@@ -51,6 +52,8 @@ namespace WinformAppTutorial
 
         private void WinFormApp_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'testDataSet.Employee' table. You can move, or remove it, as needed.
+            this.employeeTableAdapter.Fill(this.testDataSet.Employee);
             this.CenterToScreen();
             if (txtMessage.WordWrap)
             {
@@ -170,17 +173,17 @@ namespace WinformAppTutorial
             txtMessage.Font = defaultFont;
         }
 
-        private async void btnCountWords_Click(object sender, EventArgs e)
+        private async void lblCountWord_Click(object sender, EventArgs e)
         {
             lblStatus.Text = "Counting words...";
-            btnCountWords.Enabled = false;
+            lblCountWord.Enabled = false;
 
             string textToCount = txtMessage.Text;
 
             int wordCount = await Task.Run(() => CountWords(textToCount));
 
             lblStatus.Text = $"Done! Total words: {wordCount}";
-            btnCountWords.Enabled = true;
+            lblCountWord.Enabled = true;
         }
 
         private int CountWords(string text)
@@ -194,6 +197,50 @@ namespace WinformAppTutorial
             var words = text.Split(splitChars, StringSplitOptions.RemoveEmptyEntries);
             return words.Length;
         }
+
+        private void connectDBToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string connString = @"Data Source=ITD-IS-PHUCHT;User Id=sa;Password=1234;Database=test;Trusted_Connection=True;";
+            // Nếu bạn dùng SQL Authentication (có user/pass):
+            // string connString = @"Server=.\SQLEXPRESS;Database=YourDatabaseName;User Id=sa;Password=123456;";
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connString))
+                {
+
+                    string query = @"SELECT * FROM EMPLOYEE";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    conn.Open(); // Mở kết nối
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.HasRows)
+                    {
+                        while(dr.Read())
+                        {
+                            MessageBox.Show(dr.GetInt32(0).ToString() + " - " + dr.GetString(1));
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("No Data Found");
+                    }
+                    dr.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("❌ Kết nối thất bại: " + ex.Message);
+            }
+        }
+
+        private void employeeBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.employeeBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.testDataSet);
+
+        }
+
 
     }
 }
